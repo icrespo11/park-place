@@ -1,0 +1,60 @@
+﻿@model Capstone.Web.Models.NationalParkModel
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+
+    <h1 id="detail_heading">@Model.ParkName, @Model.State</h1>
+    <div id="weather_link">
+        @Html.ActionLink("5 Day Forecast", "Forecast", "Weather", new { parkCode = Model.ParkCode }, null)
+    </div>
+    <p id="italic">est. @Model.YearFounded</p>
+    <img id="detail_pic" src=@("/Content/" + Model.ParkCode + ".jpg") />
+
+    <div id="detail_info">
+        <p>@Model.Description</p>
+        <table id="detail_table">
+            <tr>
+                <td>Elevation:</td>
+                <td>@Model.ElevationInFeet</td>
+            </tr>
+            <tr>
+                <td>Acreage:</td>
+                <td>@Model.Acreage</td>
+            </tr>
+            <tr>
+                <td>Number of Trails:</td>
+                <td>@Model.MilesOfTrail</td>
+            </tr>
+            <tr>
+                <td>Number of Animal Species:</td>
+                <td>@Model.NumberOfAnimalSpecies</td>
+            </tr>
+            <tr>
+                <td>Number of Campsites:</td>
+                <td>@Model.NumberOfCampsites</td>
+            </tr>
+            <tr>
+                <td>Climate:</td>
+                <td>@Model.Climate</td>
+            </tr>
+            <tr>
+                <td>Annual Visitor Count:</td>
+                <td>@Model.AnnualVisitorCount</td>
+            </tr>
+            <tr>
+                <td>Entry Fee:</td>
+                <td>$@Model.EntryFee</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="full_quote">
+        <p id="quote">@Model.Quote</p>
+        <p id="quoter">- @Model.QuoteSource</p>
+    </div>
+
+
+</section>

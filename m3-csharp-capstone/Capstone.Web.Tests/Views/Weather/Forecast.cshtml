@@ -1,0 +1,31 @@
+﻿@model List<Capstone.Web.Models.ParkWeatherModel>
+@{
+    ViewBag.Title = "Forecast";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    @using (Html.BeginForm("TemperatureConversion", "Weather", FormMethod.Post))
+    {
+        <p class="conversion">Please select temperature preference: </p>
+        <p class="conversion">Fahrenheit @Html.RadioButton("temp", "Fahrenheit (F)")</p>
+        <p class="conversion">Celsius @Html.RadioButton("temp", "Celsius (C)")</p>
+        <input type="hidden" name="parkCode" value="@Model[0].ParkCode"/>
+        <button>Submit</button>
+    }
+
+    <h1 id="weather_heading">@Model[0].parkName[Model[0].ParkCode] Weather Forecast</h1>
+
+    <h3 id="today">Today</h3>
+
+    @foreach (var weather in Model)
+    {
+            <div class="day">
+                
+                <img class="weather_pic" src=@("/Content/" + weather.Forecast + ".png") />
+                <p class="forecast">@weather.outlook[weather.Forecast]</p>
+                <p class="temp">High @weather.CalculateCelsius(weather.High) @weather.Unit() / Low @weather.CalculateCelsius(weather.Low) @weather.Unit()</p>
+                <p class="weather_gear">@weather.WeatherGear()</p>
+            </div>
+    }
+</section>

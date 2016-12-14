@@ -1,0 +1,303 @@
+﻿#background{  
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+    z-index: -1;
+}
+
+#background img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+header{
+    height: auto;
+    width: 90%;
+    background-color: white;
+    border: solid;
+    border-width: 0.25em;
+    border-radius: 1em;
+    margin-left: 5%;
+    z-index: 4;
+    opacity: 0.95;
+    margin-bottom: 0.5em;
+    
+}
+
+nav{
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    background-color: white;
+    border: solid;
+    border-width: 0.25em;
+    border-radius: 1em;
+    z-index: 3;
+    position: fixed;
+    
+}
+
+nav li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 3em;
+
+}
+
+nav a{
+    text-decoration: none;
+    text-decoration-color: black;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav a:hover{
+    text-shadow: 0 0 3px darkgreen;
+}
+
+header img{
+    margin-top: 3em;
+    width: 70%;
+    height: auto;
+    opacity: 1;
+}
+
+section{
+    border: solid;
+    border-color: black;
+    border-width: 0.25em;
+    border-radius: 1em;
+    margin-left: 10%;
+    width: 80%;
+    height: auto;
+    background-color: white;
+    opacity: 0.95;
+    margin-bottom: 20px;
+}
+
+/*Index Styling*/
+.right-content div{
+    margin-left: 1em;
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;  
+}
+
+.right-summary{
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+    margin-left: 1em;
+    line-height: 1.5em;
+    font-size: 1.25em;
+}
+
+.left-content div{
+    margin-left: 1.5em;
+    display: inline-block;
+    width: 35%;
+}
+
+.left-summary{
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+    margin-right: 1em;
+    line-height: 1.5em;
+    font-size: 1.25em;
+}
+
+.right-content .picture{
+    width: 75%;
+    opacity: 1;
+    margin-bottom: 3em;
+    box-shadow: 1em 1em 0.5em #888888;
+}
+
+.right-content .picture:hover{
+    box-shadow: 1em 1em 0.5em #A0FFA0;
+}
+
+.left-content .picture{
+    width: 75%;
+    opacity: 1;
+    margin-bottom: 3em;
+    box-shadow: -1em 1em 0.5em #888888;
+}
+
+.left-content .picture:hover{
+    box-shadow: -1em 1em 0.5em #A0FFA0;
+}
+
+/*Detail Styling*/
+#detail_heading{
+   text-shadow: -0.25em 0.25em 4px darkgreen;
+   margin-bottom: 0.25em;
+   margin-left: 1em;
+}
+
+#italic{
+    font-style: italic;
+    font-size: 1.25em;
+    color: gray;
+    margin: 0;
+    margin-left: 1em;
+}
+
+#detail_pic{
+    margin: 1em;
+    width: 45%;
+    display: inline-block;
+}
+
+#detail_info{
+    margin: 1em;
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#detail_table{
+    width: 75%;
+}
+
+#detail_table tr td:first-child{
+    font-weight: bold;
+}
+
+#weather_link{
+    float: right;
+    margin-right: 3em;
+    font-size: 1.25em;
+}
+
+#full_quote{
+    width: 90%;
+    height: auto;
+    margin-left: 3.5%;
+    margin-right: 5%;
+    background-color: lightblue;
+    opacity: 1;
+    box-shadow: 0.75em 0.75em 0 gainsboro;
+    font-style: italic;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.25em;
+}
+
+#quote{
+    margin-bottom: 0;
+}
+
+#quoter{
+    text-align: right;
+    margin-right: 2em;
+    margin-top: 0;
+    padding-bottom: 1em;
+    font-weight: bold;
+
+} 
+
+/*Forecast Styling*/
+#weather_heading{
+    text-align: center;
+}
+
+#today{
+    margin-left: 7%;
+    margin-bottom: 0;
+
+}
+
+.day{
+    display: inline-block;
+    width: 16.5%;
+    margin: 1.55%;
+    vertical-align: top;
+    text-align: center;
+    
+}
+
+.weather_pic{
+    width: 100%;
+}
+
+.weather_gear{
+    max-width: 100%;
+}
+
+.day:nth-child(even){
+    background-color: gainsboro;
+}
+
+.temp{
+    font-weight: bold;
+    color: blue;
+}
+
+.conversion{
+    display: inline-block;
+}
+
+.conversion:first-child{
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+/*Taking Survey Styling*/
+#input_header:hover{
+    text-shadow: 20em -5em 0 black;
+}
+
+.survey_input{
+    font-weight: bold;
+}
+
+#all_inputs{
+    margin: 1em;
+    line-height: 1.5em;
+    display: inline-block;
+}
+
+#backpack{
+    float: right;
+    max-height: 15em;
+    margin: 2.5em;
+}
+
+.red{
+    color: red;
+    display: inline-block;
+}
+
+/*Survey Results Styling*/
+#result_heading{
+    margin-top: 1em;
+    margin-left: 5%;
+}
+
+#survey_table{
+    width: 90%;
+    margin: 5%;
+    margin-top: 0;
+    border-collapse: collapse;
+    font-size: 1.25em;
+}
+
+th{
+    text-align: left;
+    border-bottom: solid;
+}
+
+#survey_table tr:nth-child(even){
+    background-color:gainsboro;
+}

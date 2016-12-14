@@ -1,0 +1,27 @@
+﻿@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ASP.NET MVC National Park Capstone</title>
+    <link rel="stylesheet" href="~/Content/NPGeekStyleSheet.css"/>
+</head>
+<body>
+<div id="background"><img src="/Content/gcnp.jpg"/></div>
+    <nav>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "NationalPark")</li>
+            <li>@Html.ActionLink("Survey", "NewSurveyPost", "Survey")</li>
+        </ul>
+    </nav>
+    <header>
+        <img src="/Content/logo.png"/>
+    </header>
+        @RenderBody()
+</body>
+</html>
